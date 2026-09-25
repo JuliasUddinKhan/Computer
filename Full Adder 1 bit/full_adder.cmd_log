@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/ise/Full_Adder_1_bit/full_adder.xst" -ofn "/home/ise/Full_Adder_1_bit/full_adder.syr" 
+xst -intstyle ise -ifn "/home/ise/Full_Adder_1_bit/full_adder.xst" -ofn "/home/ise/Full_Adder_1_bit/full_adder.syr" 
