@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/Register_8bit/master_slave_dff.xst" -ofn "/home/ise/Register_8bit/master_slave_dff.syr" 

@@ -1,0 +1,3 @@
+vhdl work "sr_latch.vhd"
+vhdl work "D_latch.vhd"
+vhdl work "Master_slave_flipflop.vhd"

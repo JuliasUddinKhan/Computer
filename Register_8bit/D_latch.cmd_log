@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/Register_8bit/D_latch.xst" -ofn "/home/ise/Register_8bit/D_latch.syr" 
