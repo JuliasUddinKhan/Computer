@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/Mini_8bit_Accumulator_CPU_22201034/z_flag.xst" -ofn "/home/ise/Mini_8bit_Accumulator_CPU_22201034/z_flag.syr" 

@@ -1,0 +1,398 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Reading design: pc.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pc.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pc"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-tqg144
+
+---- Source Options
+Top Module Name                    : pc
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/full_adder_1bit.vhd" into library work
+Parsing entity <full_adder_1bit>.
+Parsing architecture <Dataflow> of entity <full_adder_1bit>.
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/register_4bit.vhd" into library work
+Parsing entity <register_4bit>.
+Parsing architecture <Behavioral> of entity <register_4bit>.
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/full_adder_4bit.vhd" into library work
+Parsing entity <full_adder_4bit>.
+Parsing architecture <Structural> of entity <full_adder_4bit>.
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/pc.vhd" into library work
+Parsing entity <pc>.
+Parsing architecture <Structural> of entity <pc>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <pc> (architecture <Structural>) from library <work>.
+
+Elaborating entity <full_adder_4bit> (architecture <Structural>) from library <work>.
+
+Elaborating entity <full_adder_1bit> (architecture <Dataflow>) from library <work>.
+
+Elaborating entity <register_4bit> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pc>.
+    Related source file is "/home/ise/Mini_8bit_Accumulator_CPU_22201034/pc.vhd".
+INFO:Xst:3210 - "/home/ise/Mini_8bit_Accumulator_CPU_22201034/pc.vhd" line 23: Output port <Cout> of the instance <PC_ADDER> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <pc> synthesized.
+
+Synthesizing Unit <full_adder_4bit>.
+    Related source file is "/home/ise/Mini_8bit_Accumulator_CPU_22201034/full_adder_4bit.vhd".
+    Summary:
+	no macro.
+Unit <full_adder_4bit> synthesized.
+
+Synthesizing Unit <full_adder_1bit>.
+    Related source file is "/home/ise/Mini_8bit_Accumulator_CPU_22201034/full_adder_1bit.vhd".
+    Summary:
+Unit <full_adder_1bit> synthesized.
+
+Synthesizing Unit <register_4bit>.
+    Related source file is "/home/ise/Mini_8bit_Accumulator_CPU_22201034/register_4bit.vhd".
+    Found 4-bit register for signal <q_reg>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <register_4bit> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 4-bit register                                        : 1
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <pc> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pc, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : pc.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4
+#      INV                         : 1
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 1
+# FlipFlops/Latches                : 4
+#      FDRE                        : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 2
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               4  out of   4800     0%  
+ Number of Slice LUTs:                    4  out of   2400     0%  
+    Number used as Logic:                 4  out of   2400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      8
+   Number with an unused Flip Flop:       4  out of      8    50%  
+   Number with an unused LUT:             4  out of      8    50%  
+   Number of fully used LUT-FF pairs:     0  out of      8     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    102     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.048ns (Maximum Frequency: 488.317MHz)
+   Minimum input arrival time before clock: 2.335ns
+   Maximum output required time after clock: 3.732ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.048ns (frequency: 488.317MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               2.048ns (Levels of Logic = 1)
+  Source:            PC_REGISTER/q_reg_0 (FF)
+  Destination:       PC_REGISTER/q_reg_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PC_REGISTER/q_reg_0 to PC_REGISTER/q_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.447   0.714  PC_REGISTER/q_reg_0 (PC_REGISTER/q_reg_0)
+     INV:I->O              1   0.206   0.579  PC_ADDER/FA0/Mxor_Sum_xo<0>1_INV_0 (pc_next<0>)
+     FDRE:D                    0.102          PC_REGISTER/q_reg_0
+    ----------------------------------------
+    Total                      2.048ns (0.755ns logic, 1.293ns route)
+                                       (36.9% logic, 63.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.335ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       PC_REGISTER/q_reg_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to PC_REGISTER/q_reg_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.683  reset_IBUF (reset_IBUF)
+     FDRE:R                    0.430          PC_REGISTER/q_reg_0
+    ----------------------------------------
+    Total                      2.335ns (1.652ns logic, 0.683ns route)
+                                       (70.8% logic, 29.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.732ns (Levels of Logic = 1)
+  Source:            PC_REGISTER/q_reg_0 (FF)
+  Destination:       PC_out<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: PC_REGISTER/q_reg_0 to PC_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.447   0.714  PC_REGISTER/q_reg_0 (PC_REGISTER/q_reg_0)
+     OBUF:I->O                 2.571          PC_out_0_OBUF (PC_out<0>)
+    ----------------------------------------
+    Total                      3.732ns (3.018ns logic, 0.714ns route)
+                                       (80.9% logic, 19.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.048|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 13.63 secs
+ 
+--> 
+
+
+Total memory usage is 483900 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

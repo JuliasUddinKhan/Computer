@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/ise/Mini_8bit_Accumulator_CPU_22201034/pc.xst" -ofn "/home/ise/Mini_8bit_Accumulator_CPU_22201034/pc.syr" 
+xst -intstyle ise -ifn "/home/ise/Mini_8bit_Accumulator_CPU_22201034/pc.xst" -ofn "/home/ise/Mini_8bit_Accumulator_CPU_22201034/pc.syr" 

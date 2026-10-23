@@ -1,0 +1,47 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/ise/Mini_8bit_Accumulator_CPU_22201034/tb_cpu_isim_beh.exe -prj /home/ise/Mini_8bit_Accumulator_CPU_22201034/tb_cpu_beh.prj work.tb_cpu 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/full_adder_1bit.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/full_adder_4bit.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/register_8bit.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/register_4bit.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/register_1bit.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/full_adder_8bit.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/z_flag.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/r_register.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/program_rom.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/pc.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/control_unit.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/alu.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/acc_register.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/cpu_top.vhd" into library work
+Parsing VHDL file "/home/ise/Mini_8bit_Accumulator_CPU_22201034/cpu_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 95668 KB
+Fuse CPU Usage: 1370 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture dataflow of entity full_adder_1bit [full_adder_1bit_default]
+Compiling architecture structural of entity full_adder_4bit [full_adder_4bit_default]
+Compiling architecture behavioral of entity register_4bit [register_4bit_default]
+Compiling architecture structural of entity pc [pc_default]
+Compiling architecture behavioral of entity program_rom [program_rom_default]
+Compiling architecture behavioral of entity control_unit [control_unit_default]
+Compiling architecture structural of entity full_adder_8bit [full_adder_8bit_default]
+Compiling architecture structural of entity alu [alu_default]
+Compiling architecture behavioral of entity register_8bit [register_8bit_default]
+Compiling architecture structural of entity acc_register [acc_register_default]
+Compiling architecture structural of entity r_register [r_register_default]
+Compiling architecture behavioral of entity register_1bit [register_1bit_default]
+Compiling architecture structural of entity z_flag [z_flag_default]
+Compiling architecture structural of entity cpu_top [cpu_top_default]
+Compiling architecture behavioral of entity tb_cpu
+Time Resolution for simulation is 1ps.
+Compiled 31 VHDL Units
+Built simulation executable /home/ise/Mini_8bit_Accumulator_CPU_22201034/tb_cpu_isim_beh.exe
+Fuse Memory Usage: 104368 KB
+Fuse CPU Usage: 1430 ms
+GCC CPU Usage: 1050 ms

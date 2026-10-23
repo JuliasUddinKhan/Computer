@@ -1,0 +1,34 @@
+Command line:
+   tb_cpu_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  47758
+
+Mon Oct 19 09:50:13 2026
+
+
+ Elaboration Time: 0.08 sec
+
+ Current Memory Usage: 199.025 Meg
+
+ Total Signals          : 221
+ Total Nets             : 216
+ Total Signal Drivers   : 99
+ Total Blocks           : 30
+ Total Primitive Blocks : 19
+ Total Processes        : 93
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 577
+
+** Failure:CPU simulation completed.
+User(VHDL) Code Called Simulation Stop
+In process cpu_tb.vhd:stimulus_process 
+ 
+
+
+ Total Simulation Time: 0.08 sec
+
+ Current Memory Usage: 276.623 Meg
+
+Mon Oct 19 09:50:58 2026
+
